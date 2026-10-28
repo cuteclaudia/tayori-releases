@@ -30,7 +30,7 @@ Unlike the program it is built on, Tayori never looks up mail servers through pu
 
 ## Updates
 
-- **Copies from GitHub** (the installer or portable download): Tayori asks you once whether to check for new versions. If you agree, it asks GitHub's API at most once a day for the newest published release of `cuteclaudia/tayori-releases`, sending nothing about you, your accounts or your mail.
+- **Copies from GitHub** (the installer or portable download): Tayori asks you once whether to check for new versions. If you agree, it asks GitHub's API at most once a day for the newest published release of `cuteclaudia/tayori-releases`. It's an ordinary web request, so GitHub sees your IP address and the usual request details, under GitHub's privacy statement. Tayori adds nothing about your accounts, your mail or the version you run.
 - **Copies from the Microsoft Store**: the Store installs and updates Tayori; Tayori doesn't
   check GitHub at all. Microsoft's privacy statement covers the Store.
 
