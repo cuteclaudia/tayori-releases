@@ -1,0 +1,55 @@
+name: Report a problem
+description: Something in Tayori went wrong, was lost or crashed.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is **public**. Don't paste messages, addresses, names or anything from your mail. Describe what happened in your own words, with invented examples if you need them.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem?
+      options:
+        - Something I had is gone or changed without my asking (data loss)
+        - Tayori closed by itself (crash)
+        - Tayori and Outlook on the web disagree (out of step)
+        - Something else doesn't work
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Tayori version
+      description: File › About Tayori, or the release you installed.
+      placeholder: e.g. 0.2.1
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: e.g. Windows 11 x64, macOS 15 Apple silicon, Fedora 42 KDE
+    validations:
+      required: true
+  - type: dropdown
+    id: account
+    attributes:
+      label: Account
+      options:
+        - Personal Microsoft account
+        - Work or school Microsoft 365 account
+        - Other (IMAP)
+        - None (local or sample mailbox)
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      description: The steps, as exactly as you can.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: "In Tayori: Help › Copy Diagnostics, then paste here; or, from Report a Problem, drag the diagnostics file it saved into this box. It has the version, the platform and the end of the log, with addresses, names, paths, hosts, links and quoted text taken out. Read it before you submit. If Tayori crashed, start it again first: the copy includes the run before. "
